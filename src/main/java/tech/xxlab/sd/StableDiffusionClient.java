@@ -10,12 +10,7 @@ public class StableDiffusionClient extends BaseClient {
         super(configuration);
     }
 
-    public Txt2ImgResponse txt2Img(Txt2ImgRequest request) {
-        try {
-            return getResponseModel(request);
-        } catch (SDKClientException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public Txt2ImgResponse txt2Img(Txt2ImgRequest request) throws SDKClientException {
+        return getResponseModel(request);
     }
 }
